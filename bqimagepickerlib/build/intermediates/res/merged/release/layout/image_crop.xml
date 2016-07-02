@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/com.callme.photocut"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.callme.photocut.ImageCropActivity" >
+
+    <include
+        android:id="@+id/rl_loading_layout"
+        layout="@layout/page_loading_layout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/imagefactory_layout_bottom"
+        android:orientation="vertical" >
+
+        <com.bq2015.photocut.ClipImageView
+            android:id="@+id/cropImg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.bq2015.photocut.ClipView
+            android:id="@+id/rect_view"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <com.bq2015.photocut.ClipCicleView
+            android:id="@+id/circle_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/imagefactory_layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/imageCrop_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="8dip" >
+
+        <Button
+            android:id="@+id/btn_crop_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_crop_cancel_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_textSize" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_crop_ok_selector"
+            android:gravity="center"
+            android:text="@string/OK"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_textSize" />
+    </LinearLayout>
+
+</RelativeLayout>

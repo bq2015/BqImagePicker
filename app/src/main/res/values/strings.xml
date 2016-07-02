@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BqImagePicker</string>
+    <string name="from_camrer">从相机里取</string>
+    <string name="from_photo_lib">从相册库里取</string>
+</resources>

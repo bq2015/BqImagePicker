@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    
+    <color name="imageCrop_bg">#363a50</color>
+    
+</resources>
